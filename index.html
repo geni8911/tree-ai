@@ -45,7 +45,7 @@
         #file-input {
             display: none;
         }
-        .result-box {
+        #result-box {
             display: none;
             margin-top: 30px;
             padding: 20px;
@@ -77,12 +77,14 @@
 
         <div id="result" class="result-box">
             <h3 style="color:#10b981; margin-top:0;">🩺 AI 진단 결과</h3>
-            <div class="result-item"><span class="label">🌿 나무 이름:</span> 소나무</div>
-            <div class="result-item"><span class="label">🍂 병명:</span> 소나무 재선충병 (의심)</div>
-            <div class="result-item"><span class="label">🐛 해충:</span> 북방수염하늘소</div>
-            <div class="result-item"><span class="label">💊 방제법:</span> 감염된 나무는 즉시 벌채 후 파쇄 처리가 필요합니다.</div>
-        </div>
-    </div>
+           
+<div id="result" class="result-box">
+    <h3 style="color:#10b981; margin-top:0;">🌱 AI 진단 결과</h3>
+    <div class="result-item"><span class="label">🌳 나무 이름:</span> 벚나무 (또는 해당 나무)</div>
+    <div class="result-item"><span class="label">🪱 병명:</span> 노린재 피해 (의심)</div>
+    <div class="result-item"><span class="label">🐛 해충:</span> 썩덩나무노린재</div>
+    <div class="result-item"><span class="label">🧯 방제법:</span> 등록된 해충 약제를 살포하고 주변 환경을 정비해 주세요.</div>
+</div>
 
     <script>
         function runAI() {
