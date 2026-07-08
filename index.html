@@ -5,28 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>트리-아이 (Tree-AI)</title>
     <style>
-        :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-color: #f8fafc;
-            --accent-color: #10b981; /* 나무 느낌의 초록색으로 변경 */
-        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--b...
-                                  <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>트리-아이 (Tree-AI)</title>
-    <style>
-        :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-color: #f8fafc;
-            --accent-color: #10b981; /* 나무 느낌의 초록색으로 변경 */
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            margin: 0;
+            padding: 40px 20px;
+            text-align: center;
         }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--b...
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #10b981;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #94a3b8;
+        }
+        .upload-btn {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 15px 30px;
+            background-color: #10b981;
+            color: #0f172a;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .upload-btn:hover {
+            background-color: #059669;
+        }
+        #file-input {
+            display: none;
+        }
+        .result-box {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background: #0f172a;
+            border-radius: 8px;
+            text-align: left;
+            border-left: 5px solid #10b981;
+        }
+        .result-item {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .label {
+            color: #38bdf8;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🌳 트리-아이 (Tree-AI)</h1>
+        <p>나무 사진을 업로드하면 AI가 진단해 드립니다.</p>
+        
+        <label class="upload-btn" for="file-input">
+            📸 사진 업로드하기
+        </label>
+        <input type="file" id="file-input" accept="image/*" onchange="runAI()">
+
+        <div id="result" class="result-box">
+            <h3 style="color:#10b981; margin-top:0;">🩺 AI 진단 결과</h3>
+            <div class="result-item"><span class="label">🌿 나무 이름:</span> 소나무</div>
+            <div class="result-item"><span class="label">🍂 병명:</span> 소나무 재선충병 (의심)</div>
+            <div class="result-item"><span class="label">🐛 해충:</span> 북방수염하늘소</div>
+            <div class="result-item"><span class="label">💊 방제법:</span> 감염된 나무는 즉시 벌채 후 파쇄 처리가 필요합니다.</div>
+        </div>
+    </div>
+
+    <script>
+        function runAI() {
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
